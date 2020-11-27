@@ -3,7 +3,7 @@
 .home_section {
   padding: 12% 0% 5% 0%;
   display: flex;
-  background: $background-header-md;
+  background: $background-header-lg;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -14,6 +14,16 @@
   align-content: center;
   width: 50%;
   min-height: 250px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      margin: 0px;
+    }
+  }
 }
 
 .right_side {
@@ -26,13 +36,4 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-}
-
-.normal_weight {
-  font-weight: normal;
-}
-
-.accent_color {
-  color: #a5d524;
-  font-weight: bold;
 }

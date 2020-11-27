@@ -1,0 +1,45 @@
+@import "../../Utils/Styles/images_url.scss";
+
+.work_on_wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.left_side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  min-height: 250px;
+  background: $woloxer-md;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.right_side {
+  display: flex;
+  width: 40%;
+  min-height: 250px;
+  background-color: #f1f4f9;
+}
+
+.medium_font_size {
+  font-size: medium;
+}
+
+.social_media {
+  display: flex;
+  align-items: center;
+}
+
+.twitter_logo {
+  width: 40px;
+  height: 40px;
+  background-image: $twitter-logo;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 5px;
+}

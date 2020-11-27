@@ -1,6 +1,7 @@
 import './style.module.scss';
 import Header from '../Header';
 import Home from '../Home/view';
+import WoloxInfo from '../WoloxInfo/view';
 
 function App() {
   return (
@@ -8,8 +9,7 @@ function App() {
 
       <Header />
       <Home />
-      <div className="benefits"></div>
-      <div className="footer"></div>
+      <WoloxInfo />
 
     </div>
   );
