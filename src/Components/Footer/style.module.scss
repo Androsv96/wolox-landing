@@ -2,9 +2,6 @@
 
 .footer {
   min-height: 450px;
-  background: $background-footer-lg;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -27,5 +24,23 @@
     background-size: contain;
     background-position: center;
     width: 100%;
+  }
+
+  @media all and (min-width: 300px) {
+    background: $background-footer-sm;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media all and (min-width: 768px) {
+    background: $background-footer-md;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media all and (min-width: 1200px) {
+    background: $background-footer-lg;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

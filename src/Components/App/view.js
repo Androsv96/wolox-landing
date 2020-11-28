@@ -1,20 +1,21 @@
 import styles from './style.module.scss';
-import Header from '../Header';
 import Home from '../Home/view';
-import WoloxInfo from '../WoloxInfo/view';
-import Benefits from '../Benefits/view';
-import Footer from '../Footer/view';
+import Header from '../Header';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { ROUTES } from '../../Utils/Constants';
 
 function App() {
   return (
     <div className={styles.main_container}>
 
-      <Header />
-      <Home />
-      <WoloxInfo />
-      <Benefits />
-      <hr className={styles.separator} />
-      <Footer />
+      <Router>
+        <Header />
+        <Switch>
+          <Route path={ROUTES.home} exact component={Home} />
+
+          <Redirect to={ROUTES.home} />
+        </Switch>
+      </Router>
 
     </div>
   );

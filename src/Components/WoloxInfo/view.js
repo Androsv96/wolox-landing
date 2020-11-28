@@ -1,5 +1,6 @@
 import styles from './style.module.scss';
 import Button from '../Button/view';
+import { WOLOX_TWITTER_URL } from '../../Utils/Constants';
 
 export default function SocialMedia() {
     return (
@@ -17,7 +18,7 @@ export default function SocialMedia() {
                 </div>
 
                 <div>
-                    <Button> <span className={styles.white}>Siguenos</span></Button>
+                    <Button onClick={() => window.open(WOLOX_TWITTER_URL)}> <span className={styles.white}>Siguenos</span></Button>
                 </div>
 
             </div>

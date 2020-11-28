@@ -29,6 +29,10 @@
 
       li {
         margin: 0px 25px 0px 0px;
+        a {
+          text-decoration: none;
+          color: black;
+        }
         span {
           color: $primary-blue;
         }
@@ -36,7 +40,7 @@
     }
   }
 
-  @media all and (min-width: 300px) and (max-width: 400px) {
+  @media all and (min-width: 300px) and (max-width: 440px) {
     position: static;
     flex-direction: column;
     font-size: $small-font;
@@ -65,7 +69,6 @@
   @media all and (max-width: 949px) {
     position: static;
     flex-direction: column;
-    font-size: $small-font;
 
     .logo {
       margin: 20px 0px 0px 0px;

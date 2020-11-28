@@ -25,8 +25,8 @@ export default function Header() {
 
             <nav className={styles.nav}>
                 <ul>
-                    <li>Inicio</li>
-                    <li>Beneficios</li>
+                    <li><a href="#greetings">Home</a></li>
+                    <li><a href="#benefits">Beneficios</a></li>
                     <li>
                         <Button><span>Register</span></Button>
                     </li>

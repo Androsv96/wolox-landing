@@ -5,6 +5,13 @@ import DrinkSnacks from '../../Assets/Images/benefits/Ic_DrinkSnacks.svg';
 import Laptop from '../../Assets/Images/benefits/Ic_laptop.svg';
 import Brain from '../../Assets/Images/benefits/Ic_brain.svg';
 
+export const WOLOX_TWITTER_URL = "https://twitter.com/Wolox";
+export const WOLOX_WEB_PAGE = "https://www.wolox.com.ar";
+export const ROUTES = {
+    home: "/home",
+    signup: "/signup",
+    techs: "/techs"
+}
 export const BENEFITS = [
     {
         icon: Hour,
