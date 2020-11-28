@@ -1,4 +1,4 @@
-@import "../../Utils/Styles/images_url.scss";
+@import "../../Utils/Styles/shared.module.scss";
 
 .work_on_wrapper {
   display: flex;
@@ -20,13 +20,18 @@
 
 .right_side {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 40%;
   min-height: 250px;
+  align-items: center;
   background-color: #f1f4f9;
-}
+  text-align: center;
 
-.medium_font_size {
-  font-size: medium;
+  h2 {
+    margin: 0px;
+    font-weight: $bold-weight;
+  }
 }
 
 .social_media {

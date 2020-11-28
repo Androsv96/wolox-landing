@@ -1,16 +1,43 @@
+@import "./images_url.scss";
+@import "./fonts.scss";
+@import "./functions.scss";
+
+$text-color: #6dc2e8;
+
+$normal-weight: 400;
+$bold-weight: 700;
+
+$accent-color: #a5d524;
+$primary-blue: #6dc2e8;
+$primary-white: #fff;
+
+$small-font: 15px;
+$medium-font: 22px;
+
+.accent {
+  color: $accent-color;
+}
+
+.blue {
+  color: $primary-blue;
+}
+
+.white {
+  color: $primary-white;
+}
+
 .normal_weight {
-  font-weight: normal;
+  font-weight: $normal-weight;
 }
 
-.accent_color {
-  color: #a5d524;
-  font-weight: bold;
+.bold_weight {
+  font-weight: $bold-weight;
 }
 
-.primary_blue {
-  color: #00a8e4;
+.small_font{
+  font-size: $small-font;
 }
 
-.primary_white {
-  color: #fff;
+.medium_font{
+  font-size: $medium-font;
 }

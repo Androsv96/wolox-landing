@@ -1,8 +1,25 @@
+import React, { useEffect, useState } from 'react';
 import styles from './style.module.scss';
+import Button from '../Button/view';
 
 export default function Header() {
+
+    const [test, setTest] = useState("not");
+    
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+    });
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 0) {
+            setTest("scrolled")
+        } else {
+            setTest("not")
+        }
+    }
+
     return (
-        <header className={`${styles.header}`}>
+        <header className={`${styles.header} ${test === "scrolled" ? styles.scrolled : ""}`}>
 
             <div className={styles.logo}></div>
 
@@ -11,7 +28,9 @@ export default function Header() {
                     <li>Inicio</li>
                     <li>Beneficios</li>
                     <li>Login</li>
-                    <li>Sign up</li>
+                    <li>
+                        <Button ><span>Sign up</span></Button>
+                    </li>
                 </ul>
             </nav>
 

@@ -1,0 +1,7 @@
+@function set-font-color($color) {
+  @if (lightness($color) > 40) {
+    @return $text-color;
+  } @else {
+    @return white;
+  }
+}

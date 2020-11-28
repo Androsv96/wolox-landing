@@ -1,0 +1,27 @@
+@import "../../Utils/Styles/shared.module.scss";
+
+.footer {
+  min-height: 250px;
+  background: $background-footer-lg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+
+  h2,
+  h3 {
+    margin: 0px;
+  }
+
+  .wolox_logo {
+    width: 40px;
+    height: 40px;
+    background-image: $wolox-black-logo;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+  }
+}

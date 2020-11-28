@@ -6,13 +6,4 @@ body,
   margin: 0;
   height: 100%;
   font: 22px "Montserrat", sans-serif, Helvetica;
-  overflow-x: hidden;
-}
-
-@media screen and (max-width: 800px) {
-  html,
-  body,
-  #root {
-    font: 15px "Montserrat", sans-serif, Helvetica;
-  }
 }

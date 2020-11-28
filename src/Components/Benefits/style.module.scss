@@ -1,0 +1,46 @@
+@import "../../Utils//Styles/shared.module.scss";
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+
+  h3 {
+    font-size: $medium-font;
+    padding-bottom: 20px;
+    span {
+      color: $primary-blue;
+    }
+  }
+
+  hr {
+    border-radius: 10px;
+    border-color: grey;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+.benefits_wapper {
+  display: grid;
+  max-width: 100%;
+  grid-gap: 10px;
+
+  @media all and (max-width: 299) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media all and (min-width: 300px) and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media all and (min-width: 1200px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
