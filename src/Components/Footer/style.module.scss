@@ -1,14 +1,18 @@
 @import "../../Utils/Styles/shared.module.scss";
 
 .footer {
-  min-height: 250px;
+  min-height: 450px;
   background: $background-footer-lg;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  div > button {
+    margin-top: 5%;
+  }
 
   h2,
   h3 {

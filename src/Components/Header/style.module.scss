@@ -1,7 +1,6 @@
 @import "../../Utils/Styles/shared.module.scss";
 
 .header {
-  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -19,12 +18,9 @@
     height: 40px;
     width: 150px;
     background-position: center;
-    margin: 20px 0px 0px 140px;
   }
 
   .nav {
-    margin: 20px 15% 0px 0px;
-
     ul {
       list-style: none;
       display: flex;
@@ -37,6 +33,58 @@
           color: $primary-blue;
         }
       }
+    }
+  }
+
+  @media all and (min-width: 300px) and (max-width: 400px) {
+    position: static;
+    flex-direction: column;
+    font-size: $small-font;
+
+    .logo {
+      margin: 20px 0px 0px 0px;
+    }
+
+    .nav {
+      margin: 20px 0px 0px 0px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      ul {
+        padding: 0px;
+        li {
+          margin: 0px 10px 0px 0px;
+          button {
+            padding: 5px 10px 5px 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (max-width: 949px) {
+    position: static;
+    flex-direction: column;
+    font-size: $small-font;
+
+    .logo {
+      margin: 20px 0px 0px 0px;
+    }
+
+    .nav {
+      margin: 20px 0px 0px 0px;
+    }
+  }
+
+  @media all and (min-width: 950px) {
+    flex-direction: row;
+    position: fixed;
+
+    .logo {
+      margin: 20px 0px 0px 140px;
+    }
+    .nav {
+      margin: 20px 15% 0px 0px;
     }
   }
 }

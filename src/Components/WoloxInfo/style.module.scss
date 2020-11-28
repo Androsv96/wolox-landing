@@ -3,48 +3,76 @@
 .work_on_wrapper {
   display: flex;
   width: 100%;
-}
 
-.left_side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  min-height: 250px;
-  background: $woloxer-md;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-}
-
-.right_side {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 40%;
-  min-height: 250px;
-  align-items: center;
-  background-color: #f1f4f9;
-  text-align: center;
-
-  h2 {
-    margin: 0px;
-    font-weight: $bold-weight;
+  .left_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    background: $woloxer-md;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
   }
-}
 
-.social_media {
-  display: flex;
-  align-items: center;
-}
+  .right_side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 250px;
+    align-items: center;
+    background-color: #f1f4f9;
+    text-align: center;
 
-.twitter_logo {
-  width: 40px;
-  height: 40px;
-  background-image: $twitter-logo;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin-right: 5px;
+    h2 {
+      margin: 0px;
+      font-weight: $bold-weight;
+    }
+  }
+
+  .social_media {
+    display: flex;
+    align-items: center;
+  }
+
+  .twitter_logo {
+    width: 40px;
+    height: 40px;
+    background-image: $twitter-logo;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 5px;
+  }
+
+  @media all and (min-width: 300px) and (max-width: 767px) {
+    flex-direction: column;
+    .left_side {
+      width: 100%;
+    }
+    .right_side {
+      width: 100%;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    flex-direction: column;
+    .left_side {
+      width: 100%;
+    }
+    .right_side {
+      width: 100%;
+    }
+  }
+
+  @media all and (min-width: 1200px) {
+    flex-direction: row;
+    .left_side {
+      width: 60%;
+    }
+    .right_side {
+      width: 40%;
+    }
+  }
 }

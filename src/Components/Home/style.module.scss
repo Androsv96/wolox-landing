@@ -3,49 +3,80 @@
 .home_section {
   padding: 12% 0% 5% 0%;
   display: flex;
-  background: $background-header-lg;
   background-repeat: no-repeat;
   background-size: cover;
-}
 
-.left_side {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 50%;
-  min-height: 250px;
-
-  div {
+  .left_side {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-content: center;
+    min-height: 250px;
+    text-align: center;
 
-    h2 {
-      margin: 0px;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        margin: 0px;
+      }
     }
   }
-}
 
-.lighter {
-  font-weight: $normal-weight;
-}
+  .lighter {
+    font-weight: $normal-weight;
+  }
 
-.bold {
-  font-weight: $bold-weight;
-}
+  .bold {
+    font-weight: $bold-weight;
+  }
 
-.accent {
-  color: $accent-color;
-}
+  .accent {
+    color: $accent-color;
+  }
 
-.right_side {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 50%;
-  min-height: 250px;
-  background: $hero-lg;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  .right_side {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 250px;
+    background: $hero-lg;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  @media all and (min-width: 300px) and (max-width: 767px) {
+    background-image: $background-header-sm;
+    flex-direction: column;
+    .left_side {
+      width: 100%;
+    }
+    .right_side {
+      width: 100%;
+    }
+  }
+
+  @media all and (min-width: 768px) {
+    background-image: $background-header-md;
+    flex-direction: column;
+    .left_side {
+      width: 100%;
+    }
+    .right_side {
+      width: 100%;
+    }
+  }
+
+  @media all and (min-width: 1200px) {
+    background: $background-header-lg;
+    flex-direction: row;
+    .left_side {
+      width: 60%;
+    }
+    .right_side {
+      width: 40%;
+    }
+  }
 }

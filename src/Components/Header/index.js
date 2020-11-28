@@ -5,7 +5,7 @@ import Button from '../Button/view';
 export default function Header() {
 
     const [test, setTest] = useState("not");
-    
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
     });
@@ -27,9 +27,8 @@ export default function Header() {
                 <ul>
                     <li>Inicio</li>
                     <li>Beneficios</li>
-                    <li>Login</li>
                     <li>
-                        <Button ><span>Sign up</span></Button>
+                        <Button><span>Register</span></Button>
                     </li>
                 </ul>
             </nav>

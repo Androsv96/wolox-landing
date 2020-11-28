@@ -6,10 +6,7 @@ export default function Footer() {
         <footer id="footer" className={styles.footer}>
             <div>
                 <h2>Gracias por <span className={styles.blue}>completar el ejercicio</span></h2>
-                <h3>Te invitamos a ver más información</h3>
-            </div>
-
-            <div>
+                <h3 className={styles.normal_weight}>Te invitamos a ver más información</h3>
                 <Button border="contained">Conocer más</Button>
             </div>
 

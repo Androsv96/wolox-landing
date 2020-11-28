@@ -12,8 +12,6 @@ export default function Benefits() {
                 }
             </div>
 
-            <hr></hr>
-
         </section>
     );
 }
