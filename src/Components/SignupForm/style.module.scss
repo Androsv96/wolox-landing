@@ -1,0 +1,45 @@
+@import "../../Utils/Styles/shared.module.scss";
+
+.signup_section {
+  padding: 12%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    select,
+    input {
+      border-radius: 10px;
+      border: 1px solid $primary-blue;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #fff;
+      &:focus {
+        outline: none;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-7px);
+      }
+    }
+
+    label {
+      text-align: left;
+      color: red;
+      font-size: $small-font;
+      margin-top: 5px;
+    }
+  }
+
+  @media all and (min-width: 300px) {
+    background-image: $background-header-sm;
+  }
+
+  @media all and (min-width: 768px) {
+    background-image: $background-header-md;
+  }
+
+  @media all and (min-width: 1200px) {
+    background-image: $background-header-lg;
+  }
+}

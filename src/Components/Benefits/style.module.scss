@@ -20,7 +20,7 @@
     max-width: 100%;
     grid-gap: 10px;
 
-    @media all and (min-width: 400) {
+    @media all and (min-width: 200) {
       grid-template-columns: repeat(1, 1fr);
     }
 

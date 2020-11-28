@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './style.module.scss';
 import Button from '../Button/view';
+import { ROUTES, SCROLLABLE_SECTIONS } from '../../Utils/Constants';
+import { useHistory } from 'react-router-dom';
 
 export default function Header() {
 
+    const history = useHistory();
     const [test, setTest] = useState("not");
 
     useEffect(() => {
@@ -25,10 +28,10 @@ export default function Header() {
 
             <nav className={styles.nav}>
                 <ul>
-                    <li><a href="#greetings">Home</a></li>
-                    <li><a href="#benefits">Beneficios</a></li>
+                    <li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.greetings}`}>Home</a></li>
+                    <li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.benefits}`}>Beneficios</a></li>
                     <li>
-                        <Button><span>Register</span></Button>
+                        <Button onClick={() => history.push(ROUTES.signup)}><span>Sign up</span></Button>
                     </li>
                 </ul>
             </nav>

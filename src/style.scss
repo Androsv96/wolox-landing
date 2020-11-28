@@ -1,4 +1,4 @@
-@import "./Utils/Styles/fonts.scss";
+@import "./Utils/Styles/shared.module.scss";
 
 html,
 body,
@@ -6,5 +6,5 @@ body,
   scroll-behavior: smooth;
   margin: 0;
   height: 100%;
-  font: 22px "Montserrat", sans-serif, Helvetica;
+  font: $medium-font "Montserrat";
 }

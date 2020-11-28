@@ -7,10 +7,34 @@ import Brain from '../../Assets/Images/benefits/Ic_brain.svg';
 
 export const WOLOX_TWITTER_URL = "https://twitter.com/Wolox";
 export const WOLOX_WEB_PAGE = "https://www.wolox.com.ar";
+
+export const ARGENTINA_ID = "ar";
+export const CHILE_ID = "ch";
+export const COLOMBIA_ID = "co";
+export const MEXICO_ID = "me";
+export const PERU_ID = "pe";
+export const COUNTRIES = [
+    { id: ARGENTINA_ID, name: "Argentina" },
+    { id: CHILE_ID, name: "Chile" },
+    { id: COLOMBIA_ID, name: "Colombia" },
+    { id: MEXICO_ID, name: "México" },
+    { id: PERU_ID, name: "Perú" },];
+export const PROVINCES = {
+    [ARGENTINA_ID]: ["Buenos aires", "Misiones", "Pampa", "Chaco", "Entre Ríos"],
+    [CHILE_ID]: ["Arica", "Parinacota", "Iquique", "Tamarugal", "Tocopilla"],
+    [COLOMBIA_ID]: ["Antioquia", "Atlántico", "Bolívar", "Boyacá", "Valle del Cauca"],
+    [MEXICO_ID]: ["Estado de México", "Jalisco", "Michoacán", "Nuevo León", "Yucatán"],
+    [PERU_ID]: ["Chachapoyas", "Bagua", "Bongara", "Condorcanqui", "Luya"],
+};
+
 export const ROUTES = {
     home: "/home",
     signup: "/signup",
     techs: "/techs"
+}
+export const SCROLLABLE_SECTIONS = {
+    greetings: "#greetings",
+    benefits: "#benefits"
 }
 export const BENEFITS = [
     {
