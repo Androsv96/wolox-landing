@@ -1,0 +1,51 @@
+@import "../../Utils/Styles/shared.module.scss";
+
+.tech_section {
+  padding: 8% 12%;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    color: $primary-blue;
+  }
+
+  .filter_section {
+    text-align: left;
+
+    @media all and (min-width: 300px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media all and (min-width: 610px) {
+      display: block;
+    }
+
+    input,
+    select {
+      margin-left: 15px;
+      border-radius: 10px;
+      border: 1px solid $primary-blue;
+      padding: 10px;
+      background-color: #fff;
+      &:focus {
+        outline: none;
+      }
+      option {
+        padding: 10px;
+        font-size: $small-font;
+      }
+    }
+  }
+
+  .table_section {
+    border: 1px solid $primary-blue;
+    border-radius: 10px;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding: 1%;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+}

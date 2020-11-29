@@ -5,7 +5,7 @@ export default async function apiCall(url, method, data) {
     let newUrl = new URL(url);
     if (method === GET_METHOD) {
 
-        Object.keys(data).forEach(key => newUrl.searchParams.append(key, data[key]));
+        if (data) Object.keys(data).forEach(key => newUrl.searchParams.append(key, data[key]));
 
         return await fetch(newUrl, {
             headers: REQUEST_HEADERS,

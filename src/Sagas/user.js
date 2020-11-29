@@ -21,7 +21,6 @@ export function* signup({ payload }) {
 
         yield put({ type: SET_LOADING, payload: false });
 
-
     } catch (error) {
         console.log(error)
     }
