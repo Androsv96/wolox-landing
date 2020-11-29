@@ -5,6 +5,11 @@ import DrinkSnacks from '../../Assets/Images/benefits/Ic_DrinkSnacks.svg';
 import Laptop from '../../Assets/Images/benefits/Ic_laptop.svg';
 import Brain from '../../Assets/Images/benefits/Ic_brain.svg';
 
+export const POST_METHOD = "POST";
+export const GET_METHOD = "GET";
+export const REQUEST_HEADERS = { 'Content-Type': 'application/json', }
+export const SIGNUP_URL = "http://private-8e8921-woloxfrontendinverview.apiary-mock.com/signup";
+
 export const WOLOX_TWITTER_URL = "https://twitter.com/Wolox";
 export const WOLOX_WEB_PAGE = "https://www.wolox.com.ar";
 
@@ -18,7 +23,8 @@ export const COUNTRIES = [
     { id: CHILE_ID, name: "Chile" },
     { id: COLOMBIA_ID, name: "Colombia" },
     { id: MEXICO_ID, name: "México" },
-    { id: PERU_ID, name: "Perú" },];
+    { id: PERU_ID, name: "Perú" },
+];
 export const PROVINCES = {
     [ARGENTINA_ID]: ["Buenos aires", "Misiones", "Pampa", "Chaco", "Entre Ríos"],
     [CHILE_ID]: ["Arica", "Parinacota", "Iquique", "Tamarugal", "Tocopilla"],

@@ -1,14 +1,13 @@
 @import "../../Utils//Styles/shared.module.scss";
 
-.outlined {
+.button {
   border-radius: 20px;
   border: 2px solid $primary-blue;
-  background-color: transparent;
-  color: $primary-blue;
   font-family: "Montserrat";
   font-size: 22px;
-  font-weight: 600;
   padding: 5px 40px 5px 40px;
+
+  font-weight: 600;
   transition: all 0.3s ease 0s;
   outline: none;
   cursor: pointer;
@@ -16,22 +15,21 @@
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-7px);
   }
-}
 
-.contained {
-  border-radius: 20px;
-  border: 2px solid $primary-blue;
-  background-color: $primary-blue;
-  color: $primary-white;
-  font-family: "Montserrat";
-  font-size: 22px;
-  font-weight: 600;
-  padding: 5px 40px 5px 40px;
-  transition: all 0.3s ease 0s;
-  outline: none;
-  cursor: pointer;
-  &:hover {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transform: translateY(-7px);
+  &.outlined {
+    background-color: transparent;
+    color: $primary-blue;
+  }
+
+  &.contained {
+    background-color: $primary-blue;
+    color: $primary-white;
+    outline: none;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: lightgray;
+    pointer-events: none;
   }
 }
