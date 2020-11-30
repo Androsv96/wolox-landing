@@ -75,7 +75,7 @@ export default function SignupForm({ signupReducer, actionDispatcher }) {
                                 ref={register({
                                     required: { value: true, message: "Required" },
                                     pattern: {
-                                        value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                                         message: 'Invalid email',
                                     },
                                 })} />
