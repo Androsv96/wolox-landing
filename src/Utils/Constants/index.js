@@ -36,10 +36,10 @@ export const PROVINCES = {
 };
 
 export const ROUTES = {
-    home: "/wolox-landing",
-    signup: "/signup",
-    techs: "/techs",
-    terms: "/terms"
+    home: "/home/",
+    signup: "/signup/",
+    techs: "/techs/",
+    terms: "/terms/"
 }
 export const SCROLLABLE_SECTIONS = {
     greetings: "#greetings",
