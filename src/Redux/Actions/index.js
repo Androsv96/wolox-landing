@@ -19,6 +19,6 @@ export const SET_HEADER_SCROLLED = "SET_HEADER_SCROLLED";
 
 
 export const actionDispatcher = (action, payload) => ({
-    type: action,
-    payload
+	type: action,
+	payload
 });

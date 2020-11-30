@@ -1,32 +1,32 @@
-import { SET_COUNTRY_SELECTED, SET_LOADING, LOGOUT, } from '../Actions';
+import { SET_COUNTRY_SELECTED, SET_LOADING, LOGOUT, } from "../Actions";
 
 const initialState = {
-    selectedCountry: "",
-    isLoading: false,
+	selectedCountry: "",
+	isLoading: false,
 };
 
 export default function SignupReducer(state = initialState, action) {
 
-    switch (action.type) {
+	switch (action.type) {
 
-        case SET_COUNTRY_SELECTED:
-            return {
-                ...state,
-                selectedCountry: action.payload,
-            }
+	case SET_COUNTRY_SELECTED:
+		return {
+			...state,
+			selectedCountry: action.payload,
+		};
 
-        case SET_LOADING:
-            return {
-                ...state,
-                isLoading: action.payload
-            }
+	case SET_LOADING:
+		return {
+			...state,
+			isLoading: action.payload
+		};
 
-        case LOGOUT:
-            return {
-                ...initialState
-            }
+	case LOGOUT:
+		return {
+			...initialState
+		};
 
-        default:
-            return state;
-    }
+	default:
+		return state;
+	}
 }

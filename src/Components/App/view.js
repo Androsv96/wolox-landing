@@ -1,43 +1,50 @@
-import React, { useEffect } from 'react';
-import styles from './style.module.scss';
-import HeaderContainer from '../Header/';
-import TechContainer from '../Tech';
-import Terms from '../Terms/view';
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
+import styles from "./style.module.scss";
+import HeaderContainer from "../Header/";
+import TechContainer from "../Tech";
+import Terms from "../Terms/view";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { ROUTES } from '../../Utils/Constants';
-import { getToken } from '../../Utils/Functions';
-import { SIGNUP_USER_SUCCESS } from '../../Redux/Actions';
+import { ROUTES } from "../../Utils/Constants";
+import { getToken } from "../../Utils/Functions";
+import { SIGNUP_USER_SUCCESS } from "../../Redux/Actions";
 
-const Home = React.lazy(() => import('../Home/view'));
-const SignUpFormContainer = React.lazy(() => import('../SignupForm'));
+const Home = React.lazy(() => import("../Home/view"));
+const SignUpFormContainer = React.lazy(() => import("../SignupForm"));
+
+App.propTypes = {
+	userReducer: PropTypes.object.isRequired,
+	actionDispatcher: PropTypes.func.isRequired
+};
+
 
 function App({ userReducer, actionDispatcher }) {
 
-  const { isLogged } = userReducer;
+	const { isLogged } = userReducer;
 
-  useEffect(() => {
-    const token = getToken();
-    if (token) actionDispatcher(SIGNUP_USER_SUCCESS);
-  }, [actionDispatcher]);
+	useEffect(() => {
+		const token = getToken();
+		if (token) actionDispatcher(SIGNUP_USER_SUCCESS);
+	}, [actionDispatcher]);
 
-  return (
-    <div className={styles.main_container}>
+	return (
+		<div className={styles.main_container}>
 
-      <Router>
-        <HeaderContainer />
-        <Switch>
-          <Route path={ROUTES.home} exact component={Home} />
-          <Route path={ROUTES.signup} exact render={() => (isLogged ? <Redirect to={ROUTES.techs} /> : <SignUpFormContainer />)} />
-          <Route path={ROUTES.terms} exact component={Terms} />
+			<Router>
+				<HeaderContainer />
+				<Switch>
+					<Route path={ROUTES.home} exact component={Home} />
+					<Route path={ROUTES.signup} exact render={() => (isLogged ? <Redirect to={ROUTES.techs} /> : <SignUpFormContainer />)} />
+					<Route path={ROUTES.terms} exact component={Terms} />
 
-          {(isLogged || getToken()) && <Route path={ROUTES.techs} component={TechContainer} />}
+					{(isLogged || getToken()) && <Route path={ROUTES.techs} component={TechContainer} />}
 
-          <Redirect to={ROUTES.home} />
-        </Switch>
-      </Router>
+					<Redirect to={ROUTES.home} />
+				</Switch>
+			</Router>
 
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;

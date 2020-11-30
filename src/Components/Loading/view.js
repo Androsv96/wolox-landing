@@ -1,9 +1,10 @@
-import styles from './style.module.scss';
+import React from "react";
+import styles from "./style.module.scss";
 
 export default function Loading() {
-    return (
-        <div className={styles.wrapper}>
-            <div className={styles.loader}></div>
-        </div>
-    );
+	return (
+		<div className={styles.wrapper}>
+			<div className={styles.loader}></div>
+		</div>
+	);
 }

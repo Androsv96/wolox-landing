@@ -5,8 +5,8 @@ import reduxSaga from "redux-saga";
 const sagaMiddleware = reduxSaga();
 
 export default function configureStore() {
-    return {
-        ...createStore(rootReducer, applyMiddleware(sagaMiddleware)),
-        runSaga: sagaMiddleware.run
-    };
+	return {
+		...createStore(rootReducer, applyMiddleware(sagaMiddleware)),
+		runSaga: sagaMiddleware.run
+	};
 }

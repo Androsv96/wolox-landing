@@ -1,25 +1,30 @@
-import styles from './style.module.scss';
+import React from "react";
+import styles from "./style.module.scss";
+import { useTranslation } from "react-i18next";
 
 export default function Welcome() {
-    return (
-        <section className={styles.home_section} id="greetings">
 
-            <div className={styles.left_side}>
-                <div>
-                    <h2 className={styles.lighter}>Bienvenido a tu</h2>
-                    <h2>
-                        <span className={styles.bold}>Entrevista Técnica </span>
-                        <span className={styles.lighter}>en</span>
-                    </h2>
-                    <h2 className={styles.accent}>Wolox</h2>
-                </div>
-            </div>
+	const { t, } = useTranslation();
 
-            <div className={styles.right_side}>
-            </div>
+	return (
+		<section className={styles.home_section} id="greetings">
+
+			<div className={styles.left_side}>
+				<div>
+					<h2 className={styles.lighter}>{t("greetings_first")}</h2>
+					<h2>
+						<span className={styles.bold}>{t("greetings_second")} &nbsp;</span>
+						<span className={styles.lighter}>{t("greetings_third")}</span>
+					</h2>
+					<h2 className={styles.accent}>Wolox</h2>
+				</div>
+			</div>
+
+			<div className={styles.right_side}>
+			</div>
 
 
-        </section>
-    );
+		</section>
+	);
 
 }

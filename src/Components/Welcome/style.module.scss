@@ -11,7 +11,6 @@
     justify-content: center;
     align-content: center;
     min-height: 250px;
-    text-align: center;
 
     div {
       display: flex;
@@ -52,6 +51,7 @@
     flex-direction: column;
     .left_side {
       width: 100%;
+      text-align: center;
     }
     .right_side {
       width: 100%;
@@ -63,6 +63,7 @@
     flex-direction: column;
     .left_side {
       width: 100%;
+      text-align: center;
     }
     .right_side {
       width: 100%;
@@ -74,6 +75,7 @@
     flex-direction: row;
     .left_side {
       width: 60%;
+      text-align: left;
     }
     .right_side {
       width: 40%;

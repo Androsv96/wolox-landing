@@ -1,17 +1,17 @@
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import View from './view';
-import { actionDispatcher } from '../../Redux/Actions';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import View from "./view";
+import { actionDispatcher } from "../../Redux/Actions";
 
 const mapStateToProps = ({ techsReducer, }) => ({
-    techsReducer,
-})
+	techsReducer,
+});
 
 const mapDispatchToProps = dispatch => bindActionCreators({ actionDispatcher }, dispatch);
 
 const TechContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(View)
+	mapStateToProps,
+	mapDispatchToProps
+)(View);
 
-export default TechContainer
+export default TechContainer;
