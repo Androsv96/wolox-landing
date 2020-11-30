@@ -1,4 +1,4 @@
-import { SIGNUP_URL, GET_METHOD, POST_METHOD } from "../Utils/Constants";
+import { SIGNUP_URL, POST_METHOD } from "../Utils/Constants";
 import { SIGNUP_USER_BEGIN, SIGNUP_USER_SUCCESS, SET_LOADING } from '../Redux/Actions';
 import { put, call, takeLatest } from "redux-saga/effects";
 import { saveToken, saveUser } from '../Utils/Functions';
