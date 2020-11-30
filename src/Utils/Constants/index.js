@@ -9,8 +9,8 @@ export const POST_METHOD = "POST";
 export const GET_METHOD = "GET";
 export const REQUEST_HEADERS = { 'Content-Type': 'application/json', }
 
-export const SIGNUP_URL = "http://private-8e8921-woloxfrontendinverview.apiary-mock.com/signup";
-export const TECHS_URL = "http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs";
+export const SIGNUP_URL = "https://private-8e8921-woloxfrontendinverview.apiary-mock.com/signup";
+export const TECHS_URL = "https://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs";
 
 export const WOLOX_TWITTER_URL = "https://twitter.com/Wolox";
 export const WOLOX_WEB_PAGE = "https://www.wolox.com.ar";
