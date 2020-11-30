@@ -1,7 +1,32 @@
+import React from 'react';
 import styles from './style.module.scss';
+import { saveTechs, countFavouritesTechs, } from '../../../Utils/Functions';
+import { GET_TECHS_SUCCESS, SET_FAVOURITES_TECHS_COUNTER, } from '../../../Redux/Actions';
 
-export default function TechRows({ techs }) {
-    console.log(techs)
+function TechRows({ techs, actionDispatcher }) {
+
+    const onFavouriteTechSelected = (favouriteTechName, checked) => {
+
+        //Counts favourites
+        let currentCount = countFavouritesTechs(techs);
+        currentCount = checked ? currentCount + 1 : currentCount - 1;
+        actionDispatcher(SET_FAVOURITES_TECHS_COUNTER, currentCount);
+
+        //Add checked to tech obj
+        let index = techs.findIndex(data => data.tech.toLowerCase() === favouriteTechName.toLowerCase());
+        let tempTechs = [...techs];
+
+        tempTechs[index] = {
+            ...tempTechs[index],
+            checked: tempTechs[index].checked ? !tempTechs[index].checked : true
+        }
+        actionDispatcher(GET_TECHS_SUCCESS, tempTechs);
+
+        //Save techs in local storage 
+        saveTechs(tempTechs);
+
+    };
+
     return (
         techs?.map((data, idx) =>
             <div className={styles.table_row} key={idx}>
@@ -13,9 +38,12 @@ export default function TechRows({ techs }) {
                 <div className={styles.tech_item}>{data.language}</div>
                 <div className={styles.tech_item}>{data.type}</div>
                 <div className={styles.tech_item}>
-                    <input type="checkbox" />
+                    <input type="checkbox" checked={data.checked ? true : false} onChange={() => onFavouriteTechSelected(data.tech, data.checked ? false : true)} />
                 </div>
             </div >
         )
-    );
+    )
 }
+
+export default React.memo(TechRows);
+

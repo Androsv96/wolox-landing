@@ -1,5 +1,5 @@
 import { TECHS_URL, GET_METHOD, } from "../Utils/Constants";
-import { GET_TECHS_BEGIN, GET_TECHS_SUCCESS, TECH_SET_LOADING } from '../Redux/Actions';
+import { GET_TECHS_BEGIN, GET_TECHS_SUCCESS, TECH_SET_LOADING, SET_TECH_ERROR } from '../Redux/Actions';
 import { put, call, takeLatest } from "redux-saga/effects";
 
 /* Api */
@@ -13,11 +13,12 @@ export function* getTechs() {
         const response = yield call(apiCall, TECHS_URL, GET_METHOD);
 
         if (response.length) yield put({ type: GET_TECHS_SUCCESS, payload: response });
+        else yield put({ type: SET_TECH_ERROR, payload: true });
 
         yield put({ type: TECH_SET_LOADING, payload: false });
 
     } catch (error) {
-        console.log(error)
+        yield put({ type: SET_TECH_ERROR, payload: true });
     }
 }
 

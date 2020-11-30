@@ -1,0 +1,10 @@
+@import "../../../Utils/Styles/shared.module.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 0px;
+  font-weight: $bold-weight;
+  color: $primary-blue;
+}

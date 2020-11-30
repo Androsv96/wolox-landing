@@ -1,4 +1,4 @@
-import { SET_COUNTRY_SELECTED, SET_LOADING } from '../Actions';
+import { SET_COUNTRY_SELECTED, SET_LOADING, LOGOUT, } from '../Actions';
 
 const initialState = {
     selectedCountry: "",
@@ -19,6 +19,11 @@ export default function SignupReducer(state = initialState, action) {
             return {
                 ...state,
                 isLoading: action.payload
+            }
+
+        case LOGOUT:
+            return {
+                ...initialState
             }
 
         default:

@@ -7,11 +7,13 @@ import { useHistory } from 'react-router-dom';
 import { LOGOUT } from '../../Redux/Actions';
 import { clearStorage } from '../../Utils/Functions';
 
-export default function Header({ userReducer, actionDispatcher }) {
+export default function Header({ userReducer, techsReducer, actionDispatcher, }) {
 
     const history = useHistory();
     const location = useLocation();
+
     const { isLogged } = userReducer;
+    const { favouritesTechsCounter } = techsReducer;
     const [scrolled, setScrolled] = useState(false);
 
 
@@ -50,6 +52,7 @@ export default function Header({ userReducer, actionDispatcher }) {
                         }
 
                     </li>
+                    {favouritesTechsCounter > 0 && <li>{`Likes ${favouritesTechsCounter}`}</li>}
                 </ul>
             </nav>
 

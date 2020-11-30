@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux';
 import View from './view';
 import { actionDispatcher } from '../../Redux/Actions';
 
-const mapStateToProps = ({ userReducer }) => ({
-    userReducer,
+const mapStateToProps = ({ userReducer, techsReducer, }) => ({
+    userReducer, techsReducer,
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({ actionDispatcher }, dispatch);

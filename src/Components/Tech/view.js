@@ -3,16 +3,35 @@ import styles from './style.module.scss';
 import TechFilters from './TechFilters/view';
 import TechHeader from './TechHeader/view';
 import TechRows from './TechRows/view';
+import TotalTechsCounter from './TotalTechsCounter/view';
 import Loading from '../Loading/view';
-import { GET_TECHS_BEGIN } from '../../Redux/Actions';
+import { GET_TECHS_BEGIN, TECH_SET_LOADING, SET_TECH_ERROR, GET_TECHS_SUCCESS, SET_FAVOURITES_TECHS_COUNTER, } from '../../Redux/Actions';
+import { filterTechs, getTechs, countFavouritesTechs } from '../../Utils/Functions';
 
 export default function Tech({ techsReducer, actionDispatcher, }) {
 
-    const { techs, isLoading } = techsReducer;
+    const { techs, isLoading, errorLoading, techToFind, techType, orderBy, } = techsReducer;
+
+    const filteredTechs = filterTechs(techs, techToFind, techType, orderBy);
 
     useEffect(() => {
-        if (techs.length === 0) actionDispatcher(GET_TECHS_BEGIN);
+        const storageTechs = getTechs();
+
+        if (techs.length === 0 && storageTechs.length === 0) actionDispatcher(GET_TECHS_BEGIN);
+
+        else if (techs.length === 0 && storageTechs.length > 0) {
+            const currentCount = countFavouritesTechs(storageTechs);
+            actionDispatcher(GET_TECHS_SUCCESS, storageTechs);
+            actionDispatcher(SET_FAVOURITES_TECHS_COUNTER, currentCount);
+        }
     }, [techs, actionDispatcher]);
+
+    useEffect(() => {
+        if (errorLoading) {
+            actionDispatcher(TECH_SET_LOADING, false);
+            actionDispatcher(SET_TECH_ERROR, false);
+        }
+    }, [errorLoading, actionDispatcher]);
 
     return (
         <div className={styles.tech_section}>
@@ -25,12 +44,13 @@ export default function Tech({ techsReducer, actionDispatcher, }) {
                     :
                     <>
                         <div className={styles.filter_section}>
-                            <TechFilters />
+                            <TechFilters actionDispatcher={actionDispatcher} />
                         </div>
 
                         <div className={styles.table_section}>
+                            <TotalTechsCounter totalTechCounter={filteredTechs.length} />
                             <TechHeader />
-                            <TechRows techs={techs} />
+                            <TechRows techs={filteredTechs} actionDispatcher={actionDispatcher} />
                         </div>
                     </>
             }

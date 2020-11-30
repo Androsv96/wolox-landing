@@ -28,7 +28,7 @@ function App({ userReducer, actionDispatcher }) {
           <Route path={ROUTES.home} exact component={Home} />
           <Route path={ROUTES.signup} exact render={() => (isLogged ? <Redirect to={ROUTES.techs} /> : <SignUpFormContainer />)} />
 
-          {isLogged && <Route path={ROUTES.techs} component={TechContainer} />}
+          {(isLogged || getToken()) && <Route path={ROUTES.techs} component={TechContainer} />}
 
           <Redirect to={ROUTES.home} />
         </Switch>
