@@ -38,7 +38,8 @@ export const PROVINCES = {
 export const ROUTES = {
     home: "/home",
     signup: "/signup",
-    techs: "/techs"
+    techs: "/techs",
+    terms: "/terms"
 }
 export const SCROLLABLE_SECTIONS = {
     greetings: "#greetings",

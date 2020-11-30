@@ -1,9 +1,10 @@
 import styles from './style.module.scss';
 import Button from '../Button/view';
 import { useForm } from 'react-hook-form';
-import { COUNTRIES, PROVINCES } from '../../Utils/Constants';
+import { COUNTRIES, PROVINCES, ROUTES, } from '../../Utils/Constants';
 import { SET_COUNTRY_SELECTED, SIGNUP_USER_BEGIN } from '../../Redux/Actions';
 import Loading from '../Loading/view';
+import { Link } from 'react-router-dom';
 
 export default function SignupForm({ signupReducer, actionDispatcher }) {
 
@@ -111,6 +112,16 @@ export default function SignupForm({ signupReducer, actionDispatcher }) {
                                 })}
                             />
                             {errors.repassword && <label>{errors.repassword.message}</label>}
+
+                            <div className={styles.terms_wrapper}>
+                                <label className={styles.terms_label} >
+                                    <input type="checkbox" className={styles.terms_input} name="terms"
+                                        ref={register({
+                                            required: { value: true, message: "Required" }
+                                        })} />
+                                    Acepto <Link target="_blank" to={ROUTES.terms}>términos y condiciones</Link>
+                                </label>
+                            </div>
 
                             <div>
                                 <Button type="submit" border={formState.isValid ? "contained" : "disabled"}>Enviar</Button>

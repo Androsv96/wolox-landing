@@ -1,0 +1,26 @@
+@import "../../Utils/Styles/shared.module.scss";
+
+.wrapper {
+  padding: 8% 12%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
+
+  @media all and (min-width: 300px) {
+    background-image: $background-header-sm;
+  }
+
+  @media all and (min-width: 768px) {
+    background-image: $background-header-md;
+  }
+
+  @media all and (min-width: 1200px) {
+    background-image: $background-header-lg;
+  }
+}

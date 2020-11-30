@@ -42,6 +42,25 @@
       font-size: $small-font;
       margin-top: 5px;
     }
+
+    .terms_wrapper {
+      display: flex;
+      justify-content: left;
+      text-align: center;
+      label {
+        font-weight: $normal-weight;
+        font-size: $medium-font;
+        color: black;
+        input {
+          height: 15px;
+          width: 15px;
+          transition: none;
+          outline: none;
+          box-shadow: none;
+          transform: none;
+        }
+      }
+    }
   }
 
   @media all and (min-width: 300px) {

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './style.module.scss';
 import HeaderContainer from '../Header/';
 import TechContainer from '../Tech';
+import Terms from '../Terms/view';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { ROUTES } from '../../Utils/Constants';
 import { getToken } from '../../Utils/Functions';
@@ -27,6 +28,7 @@ function App({ userReducer, actionDispatcher }) {
         <Switch>
           <Route path={ROUTES.home} exact component={Home} />
           <Route path={ROUTES.signup} exact render={() => (isLogged ? <Redirect to={ROUTES.techs} /> : <SignUpFormContainer />)} />
+          <Route path={ROUTES.terms} exact component={Terms} />
 
           {(isLogged || getToken()) && <Route path={ROUTES.techs} component={TechContainer} />}
 
