@@ -58,7 +58,7 @@ export default function Header({ userReducer, techsReducer, actionDispatcher, })
 			<nav className={styles.nav}>
 				<ul>
 					<li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.greetings}`}>{t("header_first")}</a></li>
-					<li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.benefits}`}>{t("header_benefits")}</a></li>
+					{location.pathname !== ROUTES.home ? "" : <li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.benefits}`}>{t("header_benefits")}</a></li>}
 					<li>
 						{
 							location.pathname === ROUTES.techs ? <Button onClick={() => handleLogout()}>{t("header_logout")}</Button>
@@ -71,7 +71,9 @@ export default function Header({ userReducer, techsReducer, actionDispatcher, })
 
 					</li>
 
-					<li onClick={() => handleChangeLanguage()}>{CURRENT_LANGUAGES[i18n.language.toLocaleLowerCase() === SPANISH_LANGUAGE_CODE ? ENGLISH_LANGUAGE_CODE : SPANISH_LANGUAGE_CODE]}</li>
+					<li onClick={() => handleChangeLanguage()}>
+						<span>{CURRENT_LANGUAGES[i18n.language.toLocaleLowerCase() === SPANISH_LANGUAGE_CODE ? ENGLISH_LANGUAGE_CODE : SPANISH_LANGUAGE_CODE]}</span>
+					</li>
 
 					{favouritesTechsCounter > 0 && <li>{`${t("header_favourites")} ${favouritesTechsCounter}`}</li>}
 				</ul>

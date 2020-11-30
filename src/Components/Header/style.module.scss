@@ -15,6 +15,7 @@
     background: $main-logo;
     background-repeat: no-repeat;
     background-size: contain;
+    min-width: 150px;
     height: 40px;
     width: 150px;
     background-position: center;
@@ -29,12 +30,14 @@
 
       li {
         margin: 0px 25px 0px 0px;
+        text-align: center;
         a {
           text-decoration: none;
           color: black;
         }
         span {
           color: $primary-blue;
+          cursor: pointer;
         }
       }
     }
@@ -82,7 +85,7 @@
     position: fixed;
 
     .logo {
-      margin: 20px 0px 0px 140px;
+      margin: 20px 0px 0px 120px;
     }
     .nav {
       margin: 20px 15% 0px 0px;
