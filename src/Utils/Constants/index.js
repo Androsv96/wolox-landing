@@ -36,7 +36,7 @@ export const PROVINCES = {
 };
 
 export const ROUTES = {
-    home: "/home",
+    home: "/wolox-landing",
     signup: "/signup",
     techs: "/techs",
     terms: "/terms"
