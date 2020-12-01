@@ -56,9 +56,9 @@ export default function Tech({ techsReducer, actionDispatcher, }) {
 						</div>
 
 						<div className={styles.table_section}>
-							<TotalTechsCounter totalTechCounter={filteredTechs.length} />
 							<TechHeader />
 							<TechRows techs={filteredTechs} actionDispatcher={actionDispatcher} />
+							<TotalTechsCounter totalTechCounter={filteredTechs.length} />
 						</div>
 					</>
 			}
