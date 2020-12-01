@@ -35,7 +35,7 @@ function TechRows({ techs, actionDispatcher }) {
 
 	return (
 		techs?.map((data, idx) =>
-			<div className={styles.table_row} key={idx}>
+			<div className={styles.table_row} key={idx} data-testid="tech_rows">
 				<div className={styles.tech_item}><img src={data.logo} alt={`${data.tech}Logo`} /></div>
 				<div className={styles.tech_item}>{data.tech}</div>
 				<div className={styles.tech_item}>{data.year}</div>

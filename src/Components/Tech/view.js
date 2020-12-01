@@ -45,7 +45,7 @@ export default function Tech({ techsReducer, actionDispatcher, }) {
 	return (
 		<div className={styles.tech_section}>
 
-			<h2>{t("techs_firts")}</h2>
+			<h2 data-testid="tech_title">{t("techs_firts")}</h2>
 
 			{
 				isLoading ? <Loading />
