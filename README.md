@@ -1,7 +1,7 @@
 # Wolox landing page
 
 ## Deploayed on
-[Vercel](https://wolox-landing-quz3vu38s.vercel.app/home/)
+[Vercel](https://wolox-landing.vercel.app/home/)
 
 ## Technologies applied
 * Reactjs
