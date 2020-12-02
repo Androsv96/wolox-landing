@@ -6,6 +6,7 @@
 ## Technologies applied
 * Reactjs
 * Redux
+* Reselect
 * Sagas
 * SCSS modules
 * React testing library
