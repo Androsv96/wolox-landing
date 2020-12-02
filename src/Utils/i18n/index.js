@@ -19,7 +19,6 @@ i18n
             }
         },
         fallbackLng: "en",
-        lng: "en",
         debug: false,
         keySeparator: false, // we do not use keys in form messages.welcome
 
