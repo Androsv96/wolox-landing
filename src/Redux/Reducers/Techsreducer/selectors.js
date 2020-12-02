@@ -25,8 +25,21 @@ export const sortTechs = createSelector(
     [filterTechs, orderBySelector],
     (filteredTechs, orderBy) => {
 
-        if (orderBy === "ASC") filteredTechs.sort((a, b) => (a.tech.toLowerCase() > b.tech.toLowerCase()) ? 1 : ((b.tech.toLowerCase() > a.tech.toLowerCase()) ? -1 : 0));
-        else filteredTechs.sort((a, b) => (a.tech.toLowerCase() > b.tech.toLowerCase()) ? -1 : ((b.tech.toLowerCase() > a.tech.toLowerCase()) ? 1 : 0));
+        if (orderBy === "ASC") {
+            filteredTechs.sort((a, b) => {
+
+                if (a.tech.toLowerCase() > b.tech.toLowerCase()) return 1;
+                else if (b.tech.toLowerCase() > a.tech.toLowerCase()) return -1;
+                else return 0;
+            });
+        }
+        else {
+            filteredTechs.sort((a, b) => {
+                if (a.tech.toLowerCase() > b.tech.toLowerCase()) return -1;
+                else if (b.tech.toLowerCase() > a.tech.toLowerCase()) return 1;
+                else return 0;
+            });
+        }
 
         return filteredTechs.slice(); //slice needed so view is rendered again
 
