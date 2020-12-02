@@ -1,4 +1,4 @@
-import { SET_COUNTRY_SELECTED, SET_LOADING, LOGOUT, } from "../Actions";
+import { SET_COUNTRY_SELECTED, SET_LOADING, LOGOUT, } from "../../Actions";
 
 const initialState = {
 	selectedCountry: "",

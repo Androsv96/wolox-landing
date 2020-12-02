@@ -7,7 +7,7 @@ import configureStore from "./Redux/Store";
 import rootSaga from "./Sagas";
 import "./Utils/i18n";
 
-const store = configureStore();
+export const store = configureStore();
 store.runSaga(rootSaga);
 
 ReactDOM.render(

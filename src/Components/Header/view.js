@@ -10,20 +10,18 @@ import { clearStorage } from "../../Utils/Functions";
 import { useTranslation } from "react-i18next";
 
 Header.propTypes = {
-	userReducer: PropTypes.object.isRequired,
-	techsReducer: PropTypes.object.isRequired,
+	isLogged: PropTypes.bool.isRequired,
+	favouritesTechsCounter: PropTypes.number.isRequired,
 	actionDispatcher: PropTypes.func.isRequired
 };
 
-export default function Header({ userReducer, techsReducer, actionDispatcher, }) {
+export default function Header({ isLogged, favouritesTechsCounter, actionDispatcher, }) {
 
 	const { t, i18n } = useTranslation();
 
 	const history = useHistory();
 	const location = useLocation();
 
-	const { isLogged } = userReducer;
-	const { favouritesTechsCounter } = techsReducer;
 	const [scrolled, setScrolled] = useState(false);
 
 

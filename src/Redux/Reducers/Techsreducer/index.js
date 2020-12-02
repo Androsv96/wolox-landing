@@ -1,7 +1,7 @@
 import {
 	GET_TECHS_SUCCESS, TECH_SET_LOADING, SET_TECH_TO_FIND, SET_TECH_ERROR, SET_TECH_TYPE_SELECTED, SET_TECH_ORDER_SELECTED,
 	SET_FAVOURITES_TECHS_COUNTER, LOGOUT,
-} from "../Actions";
+} from "../../Actions";
 
 const initialState = {
 	techs: [],

@@ -10,15 +10,15 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 SignupForm.propTypes = {
-	signupReducer: PropTypes.object.isRequired,
+	selectedCountry: PropTypes.string.isRequired,
+	isLoading: PropTypes.bool.isRequired,
 	actionDispatcher: PropTypes.func.isRequired
 };
 
-export default function SignupForm({ signupReducer, actionDispatcher }) {
-
+export default function SignupForm({ selectedCountry, isLoading, actionDispatcher }) {
+	
 	const { t, } = useTranslation();
 
-	const { selectedCountry, isLoading } = signupReducer;
 	const { register, errors, watch, handleSubmit, formState } = useForm({ mode: "all", });
 
 	const onSelectedCountry = ({ target }) => actionDispatcher(SET_COUNTRY_SELECTED, target.value);

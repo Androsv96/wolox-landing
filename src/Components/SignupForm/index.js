@@ -2,9 +2,11 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import View from "./view";
 import { actionDispatcher } from "../../Redux/Actions";
+import { selectedCountrySelector, isLoadingSelector } from "../../Redux/Reducers/SignupReducer/selectors";
 
-const mapStateToProps = ({ signupReducer }) => ({
-	signupReducer,
+const mapStateToProps = (state) => ({
+	selectedCountry: selectedCountrySelector(state),
+	isLoading: isLoadingSelector(state),
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({ actionDispatcher }, dispatch);

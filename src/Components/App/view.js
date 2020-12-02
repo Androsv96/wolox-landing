@@ -13,14 +13,12 @@ const Home = React.lazy(() => import("../Home/view"));
 const SignUpFormContainer = React.lazy(() => import("../SignupForm"));
 
 App.propTypes = {
-	userReducer: PropTypes.object.isRequired,
+	isLogged: PropTypes.bool.isRequired,
 	actionDispatcher: PropTypes.func.isRequired
 };
 
 
-function App({ userReducer, actionDispatcher }) {
-
-	const { isLogged } = userReducer;
+function App({ isLogged, actionDispatcher }) {
 
 	useEffect(() => {
 		const token = getToken();

@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import userReducer from "./userReducer";
-import signupReducer from "./signupReducer";
-import techsReducer from "./techsReducer";
+import userReducer from "./UserReducer";
+import signupReducer from "./SignupReducer";
+import techsReducer from "./Techsreducer";
 
 export default combineReducers({
 	userReducer, signupReducer, techsReducer,

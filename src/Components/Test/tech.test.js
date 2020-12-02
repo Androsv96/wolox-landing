@@ -9,8 +9,11 @@ describe("Techs component", () => {
     test("should render tech component", async () => {
         render(
             <Tech
+                techs={techsReducerMocks.techs}
+                techFiltered={techsReducerMocks.techs}
+                isLoading={false}
+                errorLoading={false}
                 actionDispatcher={jest.fn()}
-                techsReducer={techsReducerMocks}
             />
         );
 
@@ -22,8 +25,11 @@ describe("Techs component", () => {
 
         render(
             <Tech
+                techs={techsReducerMocks.techs}
+                techFiltered={techsReducerMocks.techs}
+                isLoading={false}
+                errorLoading={false}
                 actionDispatcher={jest.fn()}
-                techsReducer={techsReducerMocks}
             />
         );
 
@@ -36,7 +42,13 @@ describe("Techs component", () => {
 
     test("should render all techs rows", async () => {
         render(
-            <Tech actionDispatcher={jest.fn()} techsReducer={techsReducerMocks} />,
+            <Tech
+                techs={techsReducerMocks.techs}
+                techFiltered={techsReducerMocks.techs}
+                isLoading={false}
+                errorLoading={false}
+                actionDispatcher={jest.fn()}
+            />,
         );
 
         expect((await screen.findAllByTestId("tech_rows")).length).toBe(techsMocks.length);
@@ -47,12 +59,30 @@ describe("Techs component", () => {
     test("should render checked techs", async () => {
         const { container } = render(
             <Tech
+                techs={techsReducerMocks.techs}
+                techFiltered={techsReducerMocks.techs}
+                isLoading={false}
+                errorLoading={false}
                 actionDispatcher={jest.fn()}
-                techsReducer={techsReducerMocks}
             />
         );
 
         expect(container.querySelectorAll("input[type='checkbox']:checked").length).toBe(techsFavouritesMocks.length);
+        cleanup();
+    });
+
+    test("should render loading component", async () => {
+        render(
+            <Tech
+                techs={techsReducerMocks.techs}
+                techFiltered={techsReducerMocks.techs}
+                isLoading={true}
+                errorLoading={false}
+                actionDispatcher={jest.fn()}
+            />
+        );
+
+        expect((await screen.findAllByTestId("test_loading")).length).toBe(1);
         cleanup();
     });
 
