@@ -46,7 +46,7 @@ export default function Tech({ techs, techFiltered, isLoading, errorLoading, act
 	return (
 		<div className={styles.tech_section}>
 
-			<h2 data-testid="tech_title">{t("techs_firts")}</h2>
+			<h2 data-testid="tech_title">{t("techs.firts")}</h2>
 
 			{
 				isLoading ? <Loading />

@@ -9,7 +9,7 @@ export default function Terms() {
     return (
         <div className={styles.wrapper}>
 
-            <h2>{t("terms_first")}</h2>
+            <h2>{t("terms.first")}</h2>
 
             <p>
                 Lorem ipsum dolor sit amet consectetur adipiscing elit sociis a habitasse, magna quam bibendum ante tortor egestas accumsan praesent integer.

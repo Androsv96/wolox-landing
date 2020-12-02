@@ -1,68 +1,85 @@
 {
-    "header_first": "Inicio",
-    "header_benefits": "Beneficios",
-    "header_signup": "Registrarse",
-    "header_logout": "Salir",
-    "header_login": "Acceder",
-    "header_favourites": "Favoritos",
+    "header": {
+        "first": "Inicio",
+        "benefits": "Beneficios",
+        "signup": "Registrarse",
+        "logout": "Salir",
+        "login": "Acceder",
+        "favourites": "Favoritos"
+    },
 
-    "greetings_first": "Bienvenido a tu",
-    "greetings_second": "Entrevista Técnica",
-    "greetings_third": "en",
+    "greetings":{
+        "first": "Bienvenido a tu",
+        "second": "Entrevista Técnica",
+        "third": "en"
+    },
 
-    "wolox_info_followers_counter": 350,
-    "wolox_info_follow_us": "Síguenos",
-    "wolox_info_first": "Trabajamos para",
-    "wolox_info_second": "convertir ideas en",
-    "wolox_info_third": "productos",
+    "wolox_info":{
+        "followers_counter": 350,
+        "follow_us": "Síguenos",
+        "first": "Trabajamos para",
+        "second": "convertir ideas e",
+        "third": "productos"
+    },
 
-    "benefits_first": "Entre los beneficios que ofrecemos se encuentran",
-    "benefits_second": ";)",
-    "benefits_hero1": "Flexibilidad Horaria",
-    "benefits_hero2": "Home Office",
-    "benefits_hero3": "Capacitaciones y workshops",
-    "benefits_hero4": "Snacks, frutas y bebidas gratis",
-    "benefits_hero5": "Semana Remota",
-    "benefits_hero6": "Trabajar en últimas tecnologías",
+    "benefits": {
+        "first": "Entre los beneficios que ofrecemos se encuentran",
+        "second": ";)",
+        "hero1": "Flexibilidad Horaria",
+        "hero2": "Home Office",
+        "hero3": "Capacitaciones y workshops",
+        "hero4": "Free snacks, fruits and drinks",
+        "hero5": "Semana Remota",
+        "hero6": "Trabajar en últimas tecnologías"
+    },
 
-    "footer_first": "Gracias por",
-    "footer_second": "completar el ejercicio",
-    "footer_third": "Te invitamos a ver más información",
-    "footer_fourth": "Conocer más",
+    "footer": {
+        "first": "Gracias por",
+        "second": "completar el ejercicio",
+        "third": "Te invitamos a ver más información",
+        "fourth": "Conocer más"
+    },
 
-    "signup_first": "Registro",
-    "signup_firstname": "Nombre",
-    "signup_lastname": "Apellido",
-    "signup_country": "País",
-    "signup_province": "Provincia",
-    "signup_mail": "Correo",
-    "signup_phone": "Teléfono",
-    "signup_password": "Contraseña",
-    "signup_repassword": "Confirmar contraseña",
-    "signup_terms_accept": "Acepto",
-    "signup_terms": "términos y condiciones",
-    "signup_submit": "Enviar",
-    "signup_required": "Requerido",
-    "signup_max_30": "Sólamente 30 carácteres permitidos",
-    "signup_max_10": "Sólamente 10 carácteres permitidos",
-    "signup_invalid_email": "Correo inválido",
-    "signup_invalid_phone": "Número de teléfono inválido",
-    "signup_alphanumerics_only": "Sólo debe contener alfanuméricos",
-    "signup_password_not_match": "La contraseñas no son iguales",
+    "signup": {
+        "first": "Registro",
+        "firstname": "Nombre",
+        "lastname": "Apellido",
+        "country": "País",
+        "province": "Provincia",
+        "mail": "Correo",
+        "phone": "Teléfono",
+        "password": "Contraseña",
+        "repassword": "Confirmar contraseña",
+        "terms_accept": "Acepto",
+        "terms": "términos y condiciones",
+        "submit": "Enviar",
+        "required": "Requerido",
+        "max_30": "Sólamente 30 carácteres permitidos",
+        "max_10": "Sólamente 10 carácteres permitidos",
+        "invalid_email": "Correo inválido",
+        "invalid_phone": "Número de teléfono inválido",
+        "alphanumerics_only": "Sólo debe contener alfanuméricos",
+        "password_not_match": "La contraseñas no son iguales"
+   },
 
-    "techs_firts": "Tecnologías",
-    "techs_filter_name": "Tecnología",
-    "techs_filter_type": "Tipo",
-    "techs_filter_order_asc": "Ascendiente",
-    "techs_filter_order_desc": "Descendiente",
-    "techs_total_techs": "Total tecnologías:",
-    "techs_column_tech": "Tecnología",
-    "techs_column_year": "Año",
-    "techs_column_author" : "Autor",
-    "techs_column_license": "Licensia",
-    "techs_column_language": "Lenguaje",
-    "techs_column_type": "Tipo",
-    "techs_column_favourite": "Favorito",
+   "techs" : {
+    "firts": "Tecnologías",
+    "filter_name": "Tecnología",
+    "filter_type": "Tipo",
+    "filter_order_asc": "Ascendiente",
+    "filter_order_desc": "Descendiente",
+    "total_techs": "Total tecnologías:",
+    "column_tech": "Tecnología",
+    "column_year": "Año",
+    "column_author" : "Autor",
+    "column_license": "Licensia",
+    "column_language": "Lenguaje",
+    "column_type": "Tipo",
+    "column_favourite": "Favorito"
+},
 
-    "terms_first": "Términos y condiciones bajo construcción"
+    "terms": {
+        "first": "Términos y condiciones bajo construcción"
+    }
+    
 }

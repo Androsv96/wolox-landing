@@ -55,15 +55,15 @@ export default function Header({ isLogged, favouritesTechsCounter, actionDispatc
 
 			<nav className={styles.nav}>
 				<ul>
-					<li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.greetings}`}>{t("header_first")}</a></li>
-					{location.pathname !== ROUTES.home ? "" : <li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.benefits}`}>{t("header_benefits")}</a></li>}
+					<li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.greetings}`}>{t("header.first")}</a></li>
+					{location.pathname !== ROUTES.home ? "" : <li><a href={`${ROUTES.home}${SCROLLABLE_SECTIONS.benefits}`}>{t("header.benefits")}</a></li>}
 					<li>
 						{
-							location.pathname === ROUTES.techs ? <Button onClick={() => handleLogout()}>{t("header_logout")}</Button>
+							location.pathname === ROUTES.techs ? <Button onClick={() => handleLogout()}>{t("header.logout")}</Button>
 								:
 								location.pathname !== ROUTES.signup &&
 								<Button onClick={() => history.push(ROUTES.signup)}>
-									<span>{t(isLogged ? "header_login" : "header_signup")}</span>
+									<span>{t(isLogged ? "header.login" : "header.signup")}</span>
 								</Button>
 						}
 
@@ -73,7 +73,7 @@ export default function Header({ isLogged, favouritesTechsCounter, actionDispatc
 						<span>{CURRENT_LANGUAGES[i18n.language.toLocaleLowerCase() === SPANISH_LANGUAGE_CODE ? ENGLISH_LANGUAGE_CODE : SPANISH_LANGUAGE_CODE]}</span>
 					</li>
 
-					{favouritesTechsCounter > 0 && <li>{`${t("header_favourites")} ${favouritesTechsCounter}`}</li>}
+					{favouritesTechsCounter > 0 && <li>{`${t("header.favourites")} ${favouritesTechsCounter}`}</li>}
 				</ul>
 			</nav>
 

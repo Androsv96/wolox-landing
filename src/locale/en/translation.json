@@ -1,68 +1,85 @@
-{
-    "header_first": "Home",
-    "header_benefits": "Benefits",
-    "header_signup": "Sign up",
-    "header_logout": "Logout",
-    "header_login": "Login",
-    "header_favourites": "Favourites",
+{   
+    "header": {
+        "first": "Home",
+        "benefits": "Benefits",
+        "signup": "Sign up",
+        "logout": "Logout",
+        "login": "Login",
+        "favourites": "Favourites"
+    },
+    
+    "greetings":{
+        "first": "Welcome to your",
+        "second": "Technical Interview",
+        "third": "at"
+    },
 
-    "greetings_first": "Welcome to your",
-    "greetings_second": "Technical Interview",
-    "greetings_third": "at",
+    "wolox_info":{
+        "followers_counter": 350,
+        "follow_us": "Follow us",
+        "first": "We work to",
+        "second": "turn ideas into",
+        "third": "products"
+    },
 
-    "wolox_info_followers_counter": 350,
-    "wolox_info_follow_us": "Follow us",
-    "wolox_info_first": "We work to",
-    "wolox_info_second": "turn ideas into",
-    "wolox_info_third": "products",
+    "benefits": {
+        "first": "Among the benefits we offer are",
+        "second": ";)",
+        "hero1": "Flexible schedule",
+        "hero2": "Home Office",
+        "hero3": "Trainings and Workshops",
+        "hero4": "Free snacks, fruits and drinks",
+        "hero5": "Remote Week",
+        "hero6": "Work on latest technologies"
+    },
 
-    "benefits_first": "Among the benefits we offer are",
-    "benefits_second": ";)",
-    "benefits_hero1": "Flexible schedule",
-    "benefits_hero2": "Home Office",
-    "benefits_hero3": "Trainings and Workshops",
-    "benefits_hero4": "Free snacks, fruits and drinks",
-    "benefits_hero5": "Remote Week",
-    "benefits_hero6": "Work on latest technologies",
+    "footer": {
+        "first": "Thanks for",
+        "second": "completing the test",
+        "third": "We invite you to see more information",
+        "fourth": "See more"
+    },
 
-    "footer_first": "Thanks for",
-    "footer_second": "completing the test",
-    "footer_third": "We invite you to see more information",
-    "footer_fourth": "See more",
+   "signup": {
+        "first": "Sign up",
+        "firstname": "Firstname",
+        "lastname": "Lastname",
+        "country": "Country",
+        "province": "Province",
+        "mail": "Mail",
+        "phone": "Phone",
+        "password": "Password",
+        "repassword": "Confirm password",
+        "terms_accept": "Accept",
+        "terms": "terms and conditions",
+        "submit": "Send",
+        "required": "Required",
+        "max_30": "Only 30 characters allowed",
+        "max_10": "Only 10 characters allowed",
+        "invalid_email": "Invalid email",
+        "invalid_phone": "Invalid phone number",
+        "alphanumerics_only": "Must only contain alphanumerics",
+        "password_not_match": "Passwords does not match"
+   },
 
-    "signup_first": "Sign up",
-    "signup_firstname": "Firstname",
-    "signup_lastname": "Lastname",
-    "signup_country": "Country",
-    "signup_province": "Province",
-    "signup_mail": "Mail",
-    "signup_phone": "Phone",
-    "signup_password": "Password",
-    "signup_repassword": "Confirm password",
-    "signup_terms_accept": "Accept",
-    "signup_terms": "Terms and conditions",
-    "signup_submit": "Send",
-    "signup_required": "Required",
-    "signup_max_30": "Only 30 characters allowed",
-    "signup_max_10": "Only 10 characters allowed",
-    "signup_invalid_email": "Invalid email",
-    "signup_invalid_phone": "Invalid phone number",
-    "signup_alphanumerics_only": "Must only contain alphanumerics",
-    "signup_password_not_match": "Passwords does not match",
+   "techs" : {
+        "firts": "Techs",
+        "filter_name": "Tech name",
+        "filter_type": "Type",
+        "filter_order_asc": "Ascending",
+        "filter_order_desc": "Descending",
+        "total_techs": "Total techs:",
+        "column_tech": "Tech",
+        "column_year": "Year",
+        "column_author" : "Author",
+        "column_license": "License",
+        "column_language": "Language",
+        "column_type": "Type",
+        "column_favourite": "Favourite"
+   },
 
-    "techs_firts": "Techs",
-    "techs_filter_name": "Tech name",
-    "techs_filter_type": "Type",
-    "techs_filter_order_asc": "Ascending",
-    "techs_filter_order_desc": "Descending",
-    "techs_total_techs": "Total techs:",
-    "techs_column_tech": "Tech",
-    "techs_column_year": "Year",
-    "techs_column_author" : "Author",
-    "techs_column_license": "License",
-    "techs_column_language": "Language",
-    "techs_column_type": "Type",
-    "techs_column_favourite": "Favourite",
+   "terms": {
+    "first": "Terms and conditions under construction"
+}
 
-    "terms_first": "Terms and conditions under construction"
 }

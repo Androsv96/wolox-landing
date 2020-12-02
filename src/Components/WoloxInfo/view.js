@@ -13,7 +13,7 @@ export default function WoloxInfo() {
 			<div className={styles.left_side}>
 
 				<h2>
-					<span className={styles.accent}>{t("wolox_info_followers_counter")} &nbsp;+&nbsp; </span>
+					<span className={styles.accent}>{t("wolox_info.followers_counter")} &nbsp;+&nbsp; </span>
 					<span className={styles.blue}>Xoloxers</span>
 				</h2>
 
@@ -23,16 +23,16 @@ export default function WoloxInfo() {
 				</div>
 
 				<div>
-					<Button onClick={() => window.open(WOLOX_TWITTER_URL)}> <span className={styles.white}>{t("wolox_info_follow_us")}</span></Button>
+					<Button onClick={() => window.open(WOLOX_TWITTER_URL)}> <span className={styles.white}>{t("wolox_info.follow_us")}</span></Button>
 				</div>
 
 			</div>
 			<div className={styles.right_side}>
-				<h2>{t("wolox_info_first")}</h2>
+				<h2>{t("wolox_info.first")}</h2>
 				<h2>
-					<span className={styles.blue}>{t("wolox_info_second")} &nbsp;</span>
+					<span className={styles.blue}>{t("wolox_info.second")} &nbsp;</span>
 				</h2>
-				<h2>{t("wolox_info_third")}</h2>
+				<h2>{t("wolox_info.third")}</h2>
 			</div>
 		</div>
 	);

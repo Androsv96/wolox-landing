@@ -10,10 +10,10 @@ export default function Benefits() {
 
 	return (
 		<section id="benefits" className={styles.benefits}>
-			<h3 >{t("benefits_first")} <span>{t("benefits_second")}</span></h3>
+			<h3 >{t("benefits.first")} <span>{t("benefits.second")}</span></h3>
 			<div className={styles.benefits_wapper}>
 				{
-					BENEFITS.map((obj, idx) => <BenefitsIconDisplayer icon={obj.icon} label={t(`benefits_hero${idx + 1}`)} key={obj.label} />)
+					BENEFITS.map((obj, idx) => <BenefitsIconDisplayer icon={obj.icon} label={t(`benefits.hero${idx + 1}`)} key={obj.label} />)
 				}
 			</div>
 

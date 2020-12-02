@@ -12,6 +12,6 @@ export default function TotalTechsCounter({ totalTechCounter }) {
 	const { t, } = useTranslation();
 
 	return (
-		<div className={styles.wrapper}>{`${t("techs_total_techs")} ${totalTechCounter}`}</div>
+		<div className={styles.wrapper}>{`${t("techs.total_techs")} ${totalTechCounter}`}</div>
 	);
 }

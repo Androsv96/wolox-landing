@@ -11,10 +11,10 @@ export default function Welcome() {
 
 			<div className={styles.left_side}>
 				<div>
-					<h2 className={styles.lighter}>{t("greetings_first")}</h2>
+					<h2 className={styles.lighter}>{t("greetings.first")}</h2>
 					<h2>
-						<span className={styles.bold}>{t("greetings_second")} &nbsp;</span>
-						<span className={styles.lighter}>{t("greetings_third")}</span>
+						<span className={styles.bold}>{t("greetings.second")} &nbsp;</span>
+						<span className={styles.lighter}>{t("greetings.third")}</span>
 					</h2>
 					<h2 className={styles.accent}>Wolox</h2>
 				</div>

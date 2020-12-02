@@ -11,9 +11,9 @@ export default function Footer() {
 	return (
 		<footer id="footer" className={styles.footer}>
 			<div>
-				<h2>{t("footer_first")} &nbsp;<span className={styles.blue}>{t("footer_second")}</span></h2>
-				<h3 className={styles.normal_weight}>{t("footer_third")}</h3>
-				<Button border="contained" onClick={() => window.open(WOLOX_WEB_PAGE)}>{t("footer_fourth")}</Button>
+				<h2>{t("footer.first")} &nbsp;<span className={styles.blue}>{t("footer.second")}</span></h2>
+				<h3 className={styles.normal_weight}>{t("footer.third")}</h3>
+				<Button border="contained" onClick={() => window.open(WOLOX_WEB_PAGE)}>{t("footer.fourth")}</Button>
 			</div>
 
 			<div className={styles.wolox_logo}></div>

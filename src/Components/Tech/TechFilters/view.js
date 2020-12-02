@@ -14,18 +14,18 @@ export default function TechFilters({ actionDispatcher }) {
 
 	return (
 		<>
-			<input placeholder={t("techs_filter_name")} className={styles.filters} onChange={(e) => actionDispatcher(SET_TECH_TO_FIND, e.currentTarget.value)} />
+			<input placeholder={t("techs.filter_name")} className={styles.filters} onChange={(e) => actionDispatcher(SET_TECH_TO_FIND, e.currentTarget.value)} />
 
 			<select className={styles.filters} onChange={(e) => actionDispatcher(SET_TECH_TYPE_SELECTED, e.currentTarget.value)}>
-				<option value="">{t("techs_filter_type")}</option>
+				<option value="">{t("techs.filter_type")}</option>
 				<option value="Back-End">Back-End</option>
 				<option value="Front-End">Front-End</option>
 				<option value="Mobile">Mobile</option>
 			</select>
 
 			<select className={styles.filters} onChange={(e) => actionDispatcher(SET_TECH_ORDER_SELECTED, e.currentTarget.value)}>
-				<option value="ASC">{t("techs_filter_order_asc")}</option>
-				<option value="DESC">{t("techs_filter_order_desc")}</option>
+				<option value="ASC">{t("techs.filter_order_asc")}</option>
+				<option value="DESC">{t("techs.filter_order_desc")}</option>
 			</select>
 		</>
 	);

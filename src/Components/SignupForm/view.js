@@ -39,30 +39,30 @@ export default function SignupForm({ selectedCountry, isLoading, actionDispatche
 
 					<>
 
-						<h2>{t("signup_first")}</h2>
+						<h2>{t("signup.first")}</h2>
 
 						<form onSubmit={submitForm}>
 
-							<input name="name" placeholder={t("signup_firstname")}
+							<input name="name" placeholder={t("signup.firstname")}
 								ref={register({
-									required: { value: true, message: t("signup_required") },
-									maxLength: { value: 30, message: t("signup_max_30") }
+									required: { value: true, message: t("signup.required") },
+									maxLength: { value: 30, message: t("signup.max_30") }
 								})}
 							/>
 							{errors.name && <label>{errors.name.message}</label>}
 
 
-							<input name="last_name" placeholder={t("signup_lastname")}
+							<input name="last_name" placeholder={t("signup.lastname")}
 								ref={register({
-									required: { value: true, message: t("signup_required") },
-									maxLength: { value: 30, message: t("signup_max_30") }
+									required: { value: true, message: t("signup.required") },
+									maxLength: { value: 30, message: t("signup.max_30") }
 								})}
 							/>
 							{errors.last_name && <label>{errors.last_name.message}</label>}
 
 
-							<select name="country" ref={register({ required: { value: true, message: t("signup_required") } })} onChange={(e) => onSelectedCountry(e)} >
-								<option hidden value="">{t("signup_country")}</option>
+							<select name="country" ref={register({ required: { value: true, message: t("signup.required") } })} onChange={(e) => onSelectedCountry(e)} >
+								<option hidden value="">{t("signup.country")}</option>
 								{COUNTRIES.map(({ id, name }) => (
 									<option key={id} value={id}>
 										{name}
@@ -71,8 +71,8 @@ export default function SignupForm({ selectedCountry, isLoading, actionDispatche
 							</select>
 							{errors.country && <label>{errors.country.message}</label>}
 
-							<select name="province" ref={register({ required: { value: true, message: t("signup_required") } })}  >
-								<option hidden value="">{t("signup_province")}</option>
+							<select name="province" ref={register({ required: { value: true, message: t("signup.required") } })}  >
+								<option hidden value="">{t("signup.province")}</option>
 								{PROVINCES[selectedCountry]?.map(val => (
 									<option key={val} value={val}>
 										{val}
@@ -81,44 +81,44 @@ export default function SignupForm({ selectedCountry, isLoading, actionDispatche
 							</select>
 							{errors.province && <label>{errors.province.message}</label>}
 
-							<input name="mail" placeholder={t("signup_mail")}
+							<input name="mail" placeholder={t("signup.mail")}
 								ref={register({
-									required: { value: true, message: t("signup_required") },
+									required: { value: true, message: t("signup.required") },
 									pattern: {
 										value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-										message: t("signup_invalid_email"),
+										message: t("signup.invalid_email"),
 									},
 								})} />
 							{errors.mail && <label>{errors.mail.message}</label>}
 
-							<input name="phone" placeholder={t("signup_phone")} type="number"
+							<input name="phone" placeholder={t("signup.phone")} type="number"
 								ref={register({
-									required: { value: true, message: t("signup_required") },
-									maxLength: { value: 10, message: t("signup_max_10") },
+									required: { value: true, message: t("signup.required") },
+									maxLength: { value: 10, message: t("signup.max_10") },
 									pattern: {
 										value: /^[0-9]*$/,
-										message: t("signup_invalid_phone")
+										message: t("signup.invalid_phone")
 									}
 								})}
 							/>
 							{errors.phone && <label>{errors.phone.message}</label>}
 
-							<input name="password" placeholder={t("signup_password")} type="password"
+							<input name="password" placeholder={t("signup.password")} type="password"
 								ref={register({
-									required: { value: true, message: t("signup_required") },
+									required: { value: true, message: t("signup.required") },
 									minLength: { value: 6, message: "Minimum 6 characters allowed" },
 									pattern: {
 										value: /^[a-zA-Z0-9]+$/,
-										message: t("signup_alphanumerics_only"),
+										message: t("signup.alphanumerics_only"),
 									},
 								})}
 							/>
 							{errors.password && <label>{errors.password.message}</label>}
 
-							<input name="repassword" placeholder={t("signup_repassword")} type="password"
+							<input name="repassword" placeholder={t("signup.repassword")} type="password"
 								ref={register({
-									required: { value: true, message: t("signup_required") },
-									validate: (value) => value === watch("password") || t("signup_password_not_match"),
+									required: { value: true, message: t("signup.required") },
+									validate: (value) => value === watch("password") || t("signup.password_not_match"),
 								})}
 							/>
 							{errors.repassword && <label>{errors.repassword.message}</label>}
@@ -127,14 +127,14 @@ export default function SignupForm({ selectedCountry, isLoading, actionDispatche
 								<label className={styles.terms_label} >
 									<input type="checkbox" className={styles.terms_input} name="terms"
 										ref={register({
-											required: { value: true, message: t("signup_required") }
+											required: { value: true, message: t("signup.required") }
 										})} />
-									<span>{t("signup_terms_accept")}</span> <Link target="_blank" to={ROUTES.terms}>{t("signup_terms")}</Link>
+									<span>{t("signup.terms_accept")}</span> <Link target="_blank" to={ROUTES.terms}>{t("signup.terms")}</Link>
 								</label>
 							</div>
 
 							<div>
-								<Button type="submit" border={formState.isValid ? "contained" : "disabled"}>{t("signup_submit")}</Button>
+								<Button type="submit" border={formState.isValid ? "contained" : "disabled"}>{t("signup.submit")}</Button>
 							</div>
 
 						</form>
