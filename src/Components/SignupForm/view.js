@@ -16,7 +16,7 @@ SignupForm.propTypes = {
 };
 
 export default function SignupForm({ selectedCountry, isLoading, actionDispatcher }) {
-	
+
 	const { t, } = useTranslation();
 
 	const { register, errors, watch, handleSubmit, formState } = useForm({ mode: "all", });
@@ -73,8 +73,8 @@ export default function SignupForm({ selectedCountry, isLoading, actionDispatche
 
 							<select name="province" ref={register({ required: { value: true, message: t("signup_required") } })}  >
 								<option hidden value="">{t("signup_province")}</option>
-								{PROVINCES[selectedCountry]?.map((val, idx) => (
-									<option key={idx} value={val}>
+								{PROVINCES[selectedCountry]?.map(val => (
+									<option key={val} value={val}>
 										{val}
 									</option>
 								))}

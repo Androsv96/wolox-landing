@@ -13,7 +13,7 @@ export default function Benefits() {
 			<h3 >{t("benefits_first")} <span>{t("benefits_second")}</span></h3>
 			<div className={styles.benefits_wapper}>
 				{
-					BENEFITS.map((obj, idx) => <BenefitsIconDisplayer icon={obj.icon} label={t(`benefits_hero${idx + 1}`)} key={idx} />)
+					BENEFITS.map((obj, idx) => <BenefitsIconDisplayer icon={obj.icon} label={t(`benefits_hero${idx + 1}`)} key={obj.label} />)
 				}
 			</div>
 
